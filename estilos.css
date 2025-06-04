@@ -6,11 +6,12 @@ body
 {
     width: 600px;
     height: 1200px;    
-    background-color: white;    
+    background-color: #212121;    
 }
 
 h1{
     font-size: 36px;
+    color: white;
 }
 
 .meses{
@@ -29,6 +30,7 @@ h1{
 .topo{
     width: 100%;
     height: auto;
+    color: white;
     
     display: flex;
     flex-direction: column;    
@@ -74,4 +76,8 @@ h1{
 .estacao{
     /*padding: 15px;*/
     padding-top: 100px;
+}
+
+#fonte_img{
+    color: white;
 }
