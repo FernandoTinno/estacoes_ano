@@ -89,7 +89,23 @@ function calcula_estacao() {
 }
 
 function coresEstacao() {
+    const coresDivs = document.querySelectorAll(".cor");
+    const estacoesContainer = document.getElementById("estacoes");
 
+    coresDivs.forEach((corDiv, index) => {
+        if (vet_estacao[index]) {
+            corDiv.textContent = vet_estacao[index].nome;
+            corDiv.style.backgroundColor = vet_estacao[index].cor;
+        } else {
+            corDiv.textContent = "";
+            corDiv.style.backgroundColor = "";
+        }
+    });
+
+    if (vet_estacao.length > 0) {
+        estacoesContainer.style.backgroundColor = vet_estacao[num_cor].cor;
+        num_cor = (num_cor + 1) % vet_estacao.length;
+    }
 }
 clearInterval(intervalo);
 
